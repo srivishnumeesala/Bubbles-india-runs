@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Color Variables */
+:root {
+  --bg-primary:    #0D1117;   /* Near-black background */
+  --bg-card:       #161B22;   /* Card surface */
+  --bg-elevated:   #21262D;   /* Elevated elements */
+  --accent:        #58A6FF;   /* Bright blue — primary action */
+  --accent-green:  #3FB950;   /* Fit score high (>70) */
+  --accent-amber:  #D29922;   /* Fit score mid (40–70) */
+  --accent-red:    #F85149;   /* Fit score low (<40) */
+  --accent-infer:  #A371F7;   /* Inferred skills — purple */
+  --text-primary:  #E6EDF3;
+  --text-muted:    #8B949E;
+  --border:        #30363D;
+  --radius-sm:     6px;
+  --radius-md:     12px;
+}
+
+/* Global Font Overrides */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Code, Numbers and Fit Scores Font */
+.mono-font, .fit-score-value, code, pre {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Custom CSS classes for container wrapping and layouts */
+.stApp {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Sidebar Custom Styling */
+section[data-testid="stSidebar"] {
+    background-color: var(--bg-card) !important;
+    border-right: 1px solid var(--border) !important;
+}
+
+/* Dashboard Metric Cards Styling */
+.metric-card-container {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-md) !important;
+    padding: 18px !important;
+    margin: 8px 0px !important;
+    text-align: center !important;
+}
+
+.metric-card-title {
+    color: var(--text-muted) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin-bottom: 6px !important;
+}
+
+.metric-card-value {
+    color: var(--text-primary) !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+}
+
+/* Custom expander box borders */
+div[data-testid="stExpander"] {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-md) !important;
+    margin-bottom: 12px !important;
+}
+
+/* Button override */
+button[kind="primary"] {
+    background-color: var(--accent) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+button[kind="primary"]:hover {
+    background-color: #388bfd !important;
+}
+
+/* Grid Column Styling for Skill Badges */
+.skill-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 4px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.skill-badge-present {
+    background-color: rgba(63, 185, 80, 0.15);
+    color: #58d667;
+    border: 1px solid rgba(63, 185, 80, 0.3);
+}
+
+.skill-badge-inferred {
+    background-color: rgba(163, 113, 247, 0.15);
+    color: #bc8cff;
+    border: 1px solid rgba(163, 113, 247, 0.3);
+}
+
+.skill-badge-missing {
+    background-color: rgba(248, 81, 73, 0.15);
+    color: #ff7b72;
+    border: 1px solid rgba(248, 81, 73, 0.3);
+}

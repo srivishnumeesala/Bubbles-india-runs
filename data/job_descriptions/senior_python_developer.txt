@@ -1,0 +1,13 @@
+Job Description: Senior Python Developer
+
+We are looking for a software engineer to build data pipelines and design REST APIs.
+Core skills required:
+- Python
+- PyTorch
+- SQL
+- FastAPI
+- Docker
+
+Qualifications:
+- Bachelor's degree in Computer Science.
+- Good communication and Agile collaboration skills.
